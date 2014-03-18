@@ -6,11 +6,11 @@ import java.sql.SQLException;
 
 public class MyConnection {
 
-	private Connection connection;
+	private static  Connection connection;
 
-	public Connection hetConnection() {
-		String url = "";
-		String user = "";
+	public static Connection hetConnection() {
+		String url = "jdbc:mysql://localhost:3306/eskimoocDB";
+		String user = "root";
 		String password = "";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
